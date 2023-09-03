@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Management</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>CREATE NEW STUDENT</h1>
+        </div>
+        <div class="form-container">
+            <form th:action="@{/students/}" th:object="${studentNew}" method="POST">
+                <input type="text" name="name" th:field="*{name}" placeholder="Enter Name">
+                <input type="email" name="email" th:field="*{email}" placeholder="Enter Email">
+                <input type="submit" value="SUBMIT">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
